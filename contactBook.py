@@ -33,22 +33,22 @@ def search_contact(contacts):
   name = input('Enter name: ')
 
   for i, contact in enumerate(contacts):
-    if contacts[i].get('name') == name:
-      print(f'{i+1}. Name: {contacts[i].get('name')}  \nPhone Number: {contacts[i].get('phone')}  \nEmail: {contacts[i].get('email')}')
+    if contact['name'] == name:
+      print(f'{i+1}. Name: {contact['name']}  \nPhone Number: {contact['phone']}  \nEmail: {contact['email']}')
   
 
 def delete_contact(name):
   name = input('Enter name: ')
 
   for i, contact in enumerate(contacts):
-    if contacts[i].get('name') == name:
+    if contact['name'] == name:
       contacts.remove(contacts[i])
       print('Contact deleted')
 
 
 def view_all(contacts):
   for i, contact in enumerate(contacts):
-    print(f'{i+1}. Name: {contacts[i].get('name')}  \nPhone Number: {contacts[i].get('phone')}  \nEmail: {contacts[i].get('email')}')
+    print(f'{i+1}. Name: {contact['name']}  \nPhone Number: {contact['phone']}  \nEmail: {contact['email']}')
 
 
 while True:
